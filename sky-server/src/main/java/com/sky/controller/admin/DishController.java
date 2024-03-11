@@ -72,12 +72,13 @@ public class DishController {
 
     /**
      * 根据id查询菜品
+     *
      * @param id
      * @return
      */
     @GetMapping("/{id}")
     @ApiOperation("根据id查询菜品")
-    public Result<DishVO> getById(@PathVariable Long id){
+    public Result<DishVO> getById(@PathVariable Long id) {
         log.info("根据id查询菜品，id：{}", id);
         DishVO dishVO = dishService.getByIdWithFlavor(id);
         return Result.success(dishVO);
@@ -91,9 +92,21 @@ public class DishController {
      */
     @PutMapping
     @ApiOperation("修改菜品")
-    public Result update(@RequestBody DishDTO dishDTO){
+    public Result update(@RequestBody DishDTO dishDTO) {
         log.info("修改菜品，参数：{}", dishDTO);
         dishService.updateWithFlavor(dishDTO);
         return Result.success();
+    }
+
+    /**
+     * 根据分类id查询菜品
+     * @param categoryId
+     * @return
+     */
+    @GetMapping("/list")
+    @ApiOperation("根据分类id查询菜品")
+    public Result<List<Dish>> list(Long categoryId){
+        List<Dish> list = dishService.list(categoryId);
+        return Result.success(list);
     }
 }
