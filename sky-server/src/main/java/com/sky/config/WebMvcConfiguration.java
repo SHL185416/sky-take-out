@@ -74,7 +74,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
     }
 
     /**
-     * 扩展mvc框架消息转换器，统一对后端传输给前端的数据进行处理
+     * 扩展mvc框架消息转换器，统一对后端传输给前端的数据进行处理，用于替代@JsonFormat注解
      * @param converters
      */
     protected void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
