@@ -11,4 +11,8 @@ sky:
     access-key-id: LTAI5tH3zHyu1EsWvrw1byed
     access-key-secret: T1t4GSOvPQbmKb0zdGzICrSrzWE8nq
     bucket-name: oss1854
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
 
