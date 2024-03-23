@@ -100,6 +100,7 @@ public class DishServiceImpl implements DishService {
 
     /**
      * 根据id查询菜品信息和对应的口味信息
+     *
      * @param id
      * @return
      */
@@ -115,6 +116,7 @@ public class DishServiceImpl implements DishService {
 
     /**
      * 更新菜品信息和对应的口味信息
+     *
      * @param dishDTO
      */
     @Transactional
@@ -135,6 +137,7 @@ public class DishServiceImpl implements DishService {
 
     /**
      * 根据分类id查询菜品
+     *
      * @param categoryId
      * @return
      */
@@ -155,7 +158,6 @@ public class DishServiceImpl implements DishService {
      */
     public List<DishVO> listWithFlavor(Dish dish) {
         List<Dish> dishList = dishMapper.list(dish);
-
         List<DishVO> dishVOList = new ArrayList<>();
 
         for (Dish d : dishList) {
@@ -169,5 +171,19 @@ public class DishServiceImpl implements DishService {
         }
 
         return dishVOList;
+    }
+
+    /**
+     * 起售或停售菜品
+     *
+     * @param status
+     * @param id
+     */
+    public void startOrStop(Integer status, Long id) {
+        Dish dish = Dish.builder()
+                .status(status)
+                .id(id)
+                .build();
+        dishMapper.update(dish);
     }
 }
