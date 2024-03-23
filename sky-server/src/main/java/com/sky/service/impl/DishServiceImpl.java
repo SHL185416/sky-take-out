@@ -74,6 +74,7 @@ public class DishServiceImpl implements DishService {
      * 删除菜品
      *
      * @param ids
+     * @Transactional 开启事务管理
      */
     @Transactional
     public void deleteBatch(List<Long> ids) {
