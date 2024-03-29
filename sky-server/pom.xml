@@ -51,11 +51,14 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
 
+        <!--实体类的get,set和构造方法。-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <!--fastjson  能够支持将java bean序列化成JSON字符串，也能够将JSON字符串反序列化成Java bean-->
+        <!--配合 redis 数据上传-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
@@ -82,23 +85,25 @@
             <artifactId>aspectjweaver</artifactId>
         </dependency>
 
+        <!--用于输出控制台数据-->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
             <artifactId>knife4j-spring-boot-starter</artifactId>
         </dependency>
 
-        <!--redis-->
+        <!--redis 管理-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-        <!--Spring Cache-->
+        <!--Spring Cache 微信小程序分类管理加入redis 避免反复查询-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
 
+        <!--websocket 客户端和服务端双向消息传输 催单功能-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>

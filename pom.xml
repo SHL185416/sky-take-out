@@ -33,72 +33,84 @@
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!--mybatis-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.spring}</version>
             </dependency>
 
+            <!--lomok 快速的构造方法以及get,set-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok}</version>
             </dependency>
 
+            <!-- which is used for converting Java objects to JSON and vice versa. -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson}</version>
             </dependency>
 
+            <!--commons-lang 提供了许多实用的工具类，如字符串处理、日期处理、数字处理等方面-->
             <dependency>
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
                 <version>${commons.lang}</version>
             </dependency>
 
+            <!--Druid库的作用是提供一个数据源连接池的实现-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid}</version>
             </dependency>
 
+            <!--PageHelper库的作用是提供一个分页插件，可以简化数据库分页查询的代码编写-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${pagehelper}</version>
             </dependency>
 
+            <!--输出日志的 log.info-->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${knife4j}</version>
             </dependency>
 
+            <!--aspectjrt是AspectJ的一部分，它是一个用于实现AOP（面向切面编程）的Java库。 jwt令牌验证-->
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjrt</artifactId>
                 <version>${aspectj}</version>
             </dependency>
 
+            <!--AspectJ weaver库的作用是提供一个用于实现AOP（面向切面编程）的第三方库-->
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
                 <version>${aspectj}</version>
             </dependency>
 
+            <!--jjwt是用于生成和解析JSON Web Token的Java库。-->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
                 <version>${jjwt}</version>
             </dependency>
 
+            <!--上传图片到OSS-->
             <dependency>
                 <groupId>com.aliyun.oss</groupId>
                 <artifactId>aliyun-sdk-oss</artifactId>
                 <version>${aliyun.sdk.oss}</version>
             </dependency>
 
+            <!--jaxb-api是用于处理Java对象和XML文档之间的映射的Java API-->
             <dependency>
                 <groupId>javax.xml.bind</groupId>
                 <artifactId>jaxb-api</artifactId>

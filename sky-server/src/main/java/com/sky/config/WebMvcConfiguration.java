@@ -74,6 +74,12 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         return docket;
     }
 
+    /**
+     * 通过knife4j生成user接口文档
+     *
+     * @return
+     */
+    @Bean
     public Docket userDocket() {
         // 设置文档的标题以及描述
         ApiInfo apiInfo = new ApiInfoBuilder()
