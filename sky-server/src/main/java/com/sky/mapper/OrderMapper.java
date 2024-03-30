@@ -68,4 +68,13 @@ public interface OrderMapper {
      */
     @Select("select * from orders where status = #{status} and order_time < #{now}")
     List<Orders> getOrderByStatusAndTime(Integer status, LocalDateTime now);
+
+    /**
+     * 获取指定日期段的营业额
+     *
+     * @param dateStart
+     * @param dateEnd
+     * @return
+     */
+    Double getTurnoverByDate(LocalDateTime dateStart, LocalDateTime dateEnd, Integer status);
 }
