@@ -6,7 +6,7 @@
 
 启动redis
 启动nginx，从nginx的前端页面进入。
-访问localhost:81
+访问localhost:80
 
 ## @JsonFormat
 

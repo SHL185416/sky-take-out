@@ -1,6 +1,7 @@
 package com.sky.mapper;
 
 import com.github.pagehelper.Page;
+import com.sky.dto.GoodsSalesDTO;
 import com.sky.dto.OrdersPageQueryDTO;
 import com.sky.entity.Orders;
 import org.apache.ibatis.annotations.Mapper;
@@ -77,4 +78,24 @@ public interface OrderMapper {
      * @return
      */
     Double getTurnoverByDate(LocalDateTime dateStart, LocalDateTime dateEnd, Integer status);
+
+    /**
+     * 获取指定日期段的订单
+     *
+     * @param dateStart
+     * @param dateEnd
+     * @return
+     */
+    Integer getOrderByDate(LocalDateTime dateStart, LocalDateTime dateEnd, Integer status);
+
+
+    /**
+     * 统计指定日期段的销量top10
+     *
+     * @param dateStart
+     * @param dateEnd
+     * @return
+     */
+    List<GoodsSalesDTO> getTop10(LocalDateTime dateStart, LocalDateTime dateEnd);
+
 }
