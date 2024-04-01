@@ -6,4 +6,15 @@
         insert into user(openid, name, phone, sex, id_number, avatar, create_time)
         values (#{openid}, #{name}, #{phone}, #{sex}, #{idNumber}, #{avatar}, #{createTime})
     </insert>
+    <select id="getUserByDate" resultType="java.lang.Integer">
+        select count(id) from user
+        <where>
+            <if test="dateStart != null">
+                and create_time &gt; #{dateStart}
+            </if>
+            <if test="dateEnd != null">
+                and create_time &lt; #{dateEnd}
+            </if>
+        </where>
+    </select>
 </mapper>
