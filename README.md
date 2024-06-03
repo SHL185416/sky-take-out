@@ -1,12 +1,18 @@
 # Q&A
 
 ## 启动方法
-
-启动SkyApplicaiton后，
-
-启动redis
-启动nginx，从nginx的前端页面进入。
-访问localhost:80
+```
+管理端
+    启动SkyApplicaiton后，
+    启动redis
+    启动nginx，从nginx的前端页面进入
+    访问localhost:80 放在F:\nginx-1.20.2\html
+用户端
+    微信小程序 F:\A_source\WeChat_L\sky-take-out-mp
+接口文档
+    http://localhost:8080/doc.html
+    apifox官网
+```
 
 ## @JsonFormat
 
